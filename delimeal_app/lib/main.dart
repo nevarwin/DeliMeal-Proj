@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../screen/tabs_screen.dart';
 import '../screen/meals_detail_screen.dart';
 import '../screen/categories_screen.dart';
 import '../screen/category_meals_screen.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
               headline1: const TextStyle(
+                color: Colors.black87,
                 fontSize: 20,
                 fontFamily: 'Roboto Condensed',
                 fontWeight: FontWeight.bold,
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/', // default is '/'
       routes: {
         // same function as home
-        '/': (ctx) => const CategoriesScreen(),
+        '/': (ctx) => const TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
         MealsDetailScreen.routeName: (ctx) => const MealsDetailScreen(),
       },
