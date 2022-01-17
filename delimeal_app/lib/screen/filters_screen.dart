@@ -56,6 +56,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
         title: const Text('Filters'),
         actions: [
           IconButton(
+            highlightColor: Theme.of(context).accentColor,
             onPressed: () {
               final selectedFilters = {
                 'gluten': _glutenFree,
@@ -65,7 +66,9 @@ class _FiltersScreenState extends State<FiltersScreen> {
               };
               widget.saveFilters(selectedFilters);
             },
-            icon: const Icon(Icons.save),
+            icon: const Icon(
+              Icons.save,
+            ),
           ),
         ],
       ),
